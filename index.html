@@ -5,4 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chloe Shiff</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+        }
+        .active {
+            display: block;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+<body>
+
+    <h1>Chloe Shiff</h1>
+    
+    <!-- Buttons to switch tabs -->
+    <button onclick="showTab('research')">Research</button>
+    <button onclick="showTab('fun')">Fun</button>
+
+    <!-- Tab content -->
+    <div id="research" class="tab-content">
+        <h2>Research</h2>
+        <p>Details about my research will go here.</p>
+    </div>
+
+    <div id="fun" class="tab-content">
+        <h2>Fun</h2>
+        <p>Fun things I enjoy will go here.</p>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Show the selected tab
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Show the "Research" tab by default
+        showTab('research');
+    </script>
+
+</body>
+</html>
