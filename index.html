@@ -25,6 +25,25 @@
             cursor: pointer;
         }
     </style>
+ <style>
+    .figure-container {
+        display: flex;
+        justify-content: center; /* Center the images */
+        gap: 20px; /* Space between figures */
+        flex-wrap: wrap; /* Wrap to next line if needed */
+    }
+
+    figure {
+        text-align: center;
+        max-width: 300px; /* Limit width of figures */
+    }
+
+    figcaption {
+        font-size: 14px;
+        color: gray;
+        margin-top: 5px;
+    }
+</style>
 </head>
 <body>
 
@@ -67,6 +86,7 @@
     <div id="fun" class="tab-content">
         <h2>Fun</h2>
         <p>I also love to run on fun trails around the bay (and anywhere else I end up)!</p>
+     <div class="figure-container">
      <figure>
       <img src="runninmtdiablo.jpg" alt="Top of Mt. Diablo!" width="300">
       <figcaption>Top of Mt. Diablo! </figcaption>
@@ -79,6 +99,7 @@
       <img src="hendywoods.jpg" alt="redwood trees" width="300">
       <figcaption>Redwoods! </figcaption>
       </figure>
+      </div>
     </div>
 
     <script>
